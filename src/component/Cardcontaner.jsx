@@ -4,7 +4,7 @@ import Restaurent from "./Restaurent.jsx"
 const Cardcontainer = () =>{
     const resdata = [
         {
-            title:"Seoul Burgers & Shakes",
+            title:"Seoul Burgers",
             rating:"4.5",
             deliverytime:"40-45 mins",
             cuisine:"Burger, Bubble Teea",
@@ -32,9 +32,9 @@ const Cardcontainer = () =>{
             location:"Powai",
         },
         {
-            title:"Good Flippin' Burgers",
+            title:"Good Flippin",
             rating:"4.5",
-            deliverytime:"",
+            deliverytime:"25-30 mins",
             cuisine:"Burrger and Fries, Cold Drinks",
             location:"Marin Line",
         },
@@ -62,7 +62,7 @@ const Cardcontainer = () =>{
     ]
 
     return(
-        <div className="flex p-5 grid grid-cols-4 gap-7 container mx-auto">
+        <div className="flex p-5 grid grid-cols-4 place-items-center container mx-auto">
             {
                 resdata.map((restaurent)=>{
                     return(
