@@ -1,1 +1,2 @@
-export const img_url = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/FOOD_CATALOG/IMAGES/CMS/2024/10/24/df806c58-b0a2-483b-b5ad-f23f000d7a96_21e3b9a8-ae2b-4fab-98c1-d57368b0a2ac.jpg_compressed"
+export const img_url = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"
+export const API_URL = "https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.069654&lng=72.9158189&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"

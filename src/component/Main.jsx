@@ -3,7 +3,7 @@ import Searchbar from "./Searchbar"
 
 
 
-const Body = () =>{
+const Main = () =>{
     return(
         <div>
         {/* <div>this is body</div> */}
@@ -15,5 +15,5 @@ const Body = () =>{
 
 
 
-export default Body
+export default Main
 

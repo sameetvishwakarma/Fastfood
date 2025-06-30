@@ -1,24 +1,26 @@
-import { img_url } from "../contants"
+import { img_url } from "../contants";
 
 
-const Restaurent = ({title,rating,deliverytime,cuisine,location}) =>{
+const Restaurent = ({name,avgRating,deliverytime,cuisines,locality,imgId}) =>{
 
     // const {title,rating,delivverytime,cuisine,location} = props
 
     return(
-        <div className="w-full max-w-[200px]">
-            <div className="w-full">
-                <img className="w-4xl h-40 rounded-lg" src = {img_url} alt="restaurent" />
-                <h1 className="font-bold text-xl">{title}</h1>
+        <>
+        <div className="w-full place-items-center">
+            <div className="w-full max-w-[200px]">
+                <img className="w-3xl h-50 rounded-lg" src = {`${img_url + imgId}`} alt="restaurent" />
+                <h1 className="text-xl font-bold w-full h-7 overflow-hidden text-ellipsis">{name}</h1>
 
                 <div className="flex gap-3 font-semibold">
-                    <p>{rating}</p>
+                    <p>{avgRating}</p>
                     <p>{deliverytime}</p>
                 </div>
-                    <p className="text-[16px] text-gray-700">{cuisine}</p>
-                    <p className="text-[16px] text-gray-700">{location}</p>
+                      <p className="text-[16px] text-gray-700"> {cuisines} </p>
+                    <p className="text-[16px] text-gray-700">{locality}</p>
             </div>
         </div>  
+        </>
     )
 }
 

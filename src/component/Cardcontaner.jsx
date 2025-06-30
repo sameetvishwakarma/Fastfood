@@ -1,10 +1,12 @@
 import Restaurent from "./Restaurent.jsx"
-
+import { useEffect, useState } from "react";
+import  {API_URL} from "../contants.js";
 
 const Cardcontainer = () =>{
+    const [restaurentData , setRestaurentData] = useState([]);
     const resdata = [
         {
-            title:"Seoul Burgers",
+            title:"Seoul Burgers & fries burger Seoul Burgers & fries burger",
             rating:"4.5",
             deliverytime:"40-45 mins",
             cuisine:"Burger, Bubble Teea",
@@ -59,19 +61,46 @@ const Cardcontainer = () =>{
             cuisine:"Bevrages, Fast food",
             location:"Marol Naka",
         },
-    ]
+    ];
+
+    const getData = async() =>{
+        try {
+            const data = await fetch(API_URL);
+            const json = await data.json();
+            console.log("json",json?.data?.cards);
+            setRestaurentData(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        }
+
+        catch (err) {
+            console.log("err", err);
+        }
+    }
+    useEffect(()=>{
+
+        getData()
+
+    },[])
+
 
     return(
-        <div className="flex p-5 grid grid-cols-4 place-items-center container mx-auto">
+        <>
+        <div className="mx-28 mt-8 mb-3.5 font-bold text-2xl">
+            <h1>Top restaurant chains in Mumbai</h1>
+        </div>
+
+        <div className="p-5 grid grid-cols-4 container mx-auto">
             {
-                resdata.map((restaurent)=>{
+                restaurentData.map((restaurent, index)=>{
                     return(
-                        <Restaurent
-                        title={restaurent?.title}
-                        rating={restaurent?.rating}
-                        deliverytime={restaurent?.deliverytime}
-                        cuisine={restaurent?.cuisine}
-                        location={restaurent?.location}
+                        <Restaurent 
+                        name={restaurent?.info?.name}
+                        avgRating={restaurent?.info?.avgRating}
+                        deliverytime={restaurent?.info?.sla?.slaString}
+                        cuisines={restaurent?.info?. cuisines}
+                        locality={restaurent?.info?.locality}
+                        imgId = {restaurent?.info?.cloudinaryImageId}
+                        // {...restaurent}
+                        key = {restaurent?.info?.id}
                         />
                     );
                 })
@@ -85,6 +114,7 @@ const Cardcontainer = () =>{
             {/* <restaurent /> */}
             {/* <restaurent /> */}
         </div>
+        </>
     )
 }
 

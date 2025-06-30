@@ -3,7 +3,7 @@
 // import viteLogo from '/vite.svg'
 import './App.css'
 import Header from "./component/Header.jsx"
-import Body from "./component/body.jsx"
+import Main from "./component/Main.jsx"
 import Footer from './component/footer.jsx'
 
 
@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       <Header />
-      <Body />
+      <Main />
       <Footer />
     </>
   )

@@ -1,7 +1,13 @@
+import logo_img from "/src/assets/logo.png"
+
+
+
 const Header = ()=>{
     return(
         <div className ="fluid-container flex justify-between p-7 shadow-lg text-lg">
-            <div>logo</div>
+            <div>
+                <img className="logo" id="logo" src={logo_img} alt="logo" />
+            </div>
             <div>
                 <ul className = "flex gap-7">
                     <li>Home</li>
