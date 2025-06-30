@@ -4,7 +4,7 @@
 import './App.css'
 import Header from "./component/Header.jsx"
 import Main from "./component/Main.jsx"
-import Footer from './component/footer.jsx'
+import Footer from './component/Ftooter.jsx'
 
 
 function App() {
