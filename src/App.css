@@ -6,3 +6,25 @@
     width: 35px;
     border-radius: 50%;
 }
+
+.img_size {
+    width: 85%;
+    height: 250px;
+    border-radius: 33px;
+    object-fit: cover;
+}
+
+.content{
+    justify-self: center;
+}
+
+.MenuCard{
+    display: flex;
+    /* width: 85%; */
+    overflow-x: scroll;
+}
+
+.fonts {
+    font-family: "Raleway", sans-serif;
+    font-size: 12px;
+}

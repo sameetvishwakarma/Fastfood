@@ -1,19 +1,18 @@
 import Cardcontainer from "./Cardcontaner"
-import Searchbar from "./Searchbar"
+// import Searchbar from "./Searchbar"
 
 
-
-const Main = () =>{
+const Body = () =>{
     return(
         <div>
         {/* <div>this is body</div> */}
         <Cardcontainer />
-        <Searchbar />
+        {/* <Searchbar /> */}
         </div>
     )
 }
 
 
 
-export default Main
+export default Body
 

@@ -7,9 +7,9 @@ const Restaurent = ({name,avgRating,deliverytime,cuisines,locality,imgId}) =>{
 
     return(
         <>
-        <div className="w-full place-items-center">
-            <div className="w-full max-w-[200px]">
-                <img className="w-3xl h-50 rounded-lg" src = {`${img_url + imgId}`} alt="restaurent" />
+        <div className="w-full content ">
+            <div className="w-full max-w-[]">
+                <img className="w-3xl img_size h-50 rounded-lg" src = {`${img_url + imgId}`} alt="restaurent" />
                 <h1 className="text-xl font-bold w-full h-7 overflow-hidden text-ellipsis">{name}</h1>
 
                 <div className="flex gap-3 font-semibold">
