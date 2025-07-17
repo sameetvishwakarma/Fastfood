@@ -1,14 +1,16 @@
 import { useState } from "react";
 
-const Searchbar = () => {
+const Searchbar = ({ setRestaurentData }) => {
   const [searchText, setSerachText] = useState("");
   const [filterData, setFilterData] = useState([]);
 
   const handleSearchItem = () => {
-    // console.log("handleSearchItem");
-    const newArray = filterData.filter((restaurant) =>
+    console.log("search function is called");
+
+    const newArray = setRestaurentData.filter((restaurant) =>
       restaurant?.info?.name.includes(searchText)
     );
+    setFilterData(newArray);
     console.log("newArray", newArray);
   };
 

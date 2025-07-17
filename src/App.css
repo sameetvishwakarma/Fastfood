@@ -7,24 +7,56 @@
     border-radius: 50%;
 }
 
-.img_size {
-    width: 85%;
-    height: 250px;
-    border-radius: 33px;
+.fonts {
+    font-family: "Raleway", sans-serif;
+}
+/*Carousels*/
+.Carousels-Card {
+    display: flex;
+    height: 160px;
+}
+
+
+
+/* Restaurent Card CSS */
+
+/* .card {
+    width: 100%;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+} */
+
+.card-img {
+    width: 100%;
+    height: 210px;
+    border-radius: 18px;
     object-fit: cover;
 }
 
-.content{
-    justify-self: center;
+.card-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 15px;
+    height: 25px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
-.MenuCard{
+.card-info {
     display: flex;
-    /* width: 85%; */
-    overflow-x: scroll;
+    gap: 15px;
+    font-weight: 500;
+    margin-top: 6px;
 }
 
-.fonts {
-    font-family: "Raleway", sans-serif;
-    font-size: 12px;
+.card-text {
+    font-size: 16px;
+    color: #4b5563;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-top: 2px;
 }

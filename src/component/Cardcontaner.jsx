@@ -68,12 +68,12 @@ const Cardcontainer = () => {
     try {
       const data = await fetch(API_URL);
       const json = await data.json();
-      //   console.log(
-      //     "json",
-      //     json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
-      //       ?.restaurants
-      //   );
-      // console.log("json",json?.data?.cards[0]);
+      console.log(
+        "json",
+        json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+          ?.restaurants
+      );
+      // console.log("json", json?.data?.cards[0]);
       setRestaurentData(
         json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
           ?.restaurants
@@ -93,7 +93,7 @@ const Cardcontainer = () => {
         <h1>Top restaurant chains in Mumbai</h1>
       </div>
 
-      <div className=" p-5 grid grid-cols-4 container mx-auto">
+      <div className=" p-5 grid grid-cols-4 container mx-auto max-w-[1200px] gap-15 place-items-center">
         {restaurentData.map((restaurents) => {
           return (
             <Restaurent

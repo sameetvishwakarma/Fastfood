@@ -33,31 +33,33 @@ function Menu() {
         <h1>What's on your mind?</h1>
       </div>
 
-      <div className="MenuCard mx-27">
-        {menuData?.map((info, index) => {
-          return (
-            <MenuCardContainer
-              IMG_LINK={info?.imageId}
-              title={info?.action?.text}
-              key={info?.id}
-            />
-          );
-        })}
+      <div className="mx-40">
+        <div className="Carousels-Card container justify-start w-full overflow-x-auto overflow-y-hidden scrollbar-hide">
+          {menuData?.map((info, index) => {
+            return (
+              <MenuCardContainer
+                IMG_LINK={info?.imageId}
+                title={info?.action?.text}
+                key={info?.id}
+              />
+            );
+          })}
 
-        {/* <MenuCardContainer /> */}
-        {/* <MenuCardContainer /> */}
-        {/* <MenuCardContainer /> */}
-        {/* <MenuCardContainer /> */}
-        {/* <MenuCardContainer /> */}
-        {/* <MenuCardContainer /> */}
-        {/* <MenuCardContainer /> */}
-        {/* <MenuCardContainer /> */}
-        {/* <MenuCardContainer /> */}
-        {/* <MenuCardContainer /> */}
-        {/* <MenuCardContainer /> */}
-        {/* <MenuCardContainer /> */}
-        {/* <MenuCardContainer /> */}
-        {/* <MenuCardContainer /> */}
+          {/* <MenuCardContainer /> */}
+          {/* <MenuCardContainer /> */}
+          {/* <MenuCardContainer /> */}
+          {/* <MenuCardContainer /> */}
+          {/* <MenuCardContainer /> */}
+          {/* <MenuCardContainer /> */}
+          {/* <MenuCardContainer /> */}
+          {/* <MenuCardContainer /> */}
+          {/* <MenuCardContainer /> */}
+          {/* <MenuCardContainer /> */}
+          {/* <MenuCardContainer /> */}
+          {/* <MenuCardContainer /> */}
+          {/* <MenuCardContainer /> */}
+          {/* <MenuCardContainer /> */}
+        </div>
       </div>
     </>
   );

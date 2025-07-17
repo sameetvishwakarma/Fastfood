@@ -3,13 +3,13 @@ import Searchbar from "./Searchbar";
 
 const Header = () => {
   return (
-    <div className="fluid-container flex justify-between p-7 shadow-lg text-lg">
+    <div className="fluid-container flex justify-between p-7 shadow-lg ">
       <div>
         <img className="logo" id="logo" src={logo_img} alt="logo" />
       </div>
       <Searchbar />
       <div>
-        <ul className="flex gap-7 font-semibold text-orange-600 fonts">
+        <ul className="flex gap-7 font-semibold text-orange-600 fonts text-lg">
           <li>
             <a className="hover:text-rose-700" href="#">
               Home
