@@ -1,39 +1,45 @@
 import logo_img from "/src/assets/logo.png";
 import Searchbar from "./Searchbar";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHome } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const Header = () => {
+  <script
+    src="https://kit.fontawesome.com/8b94f344a4.js"
+    crossorigin="anonymous"
+  ></script>;
   return (
-    <div className="fluid-container flex justify-between p-7 shadow-lg ">
+    <div className="fluid-container flex justify-between p-[15px] shadow-lg ">
       <div>
         <img className="logo" id="logo" src={logo_img} alt="logo" />
       </div>
       <Searchbar />
       <div>
-        <ul className="flex gap-7 font-semibold text-orange-600 fonts text-lg">
+        <ul className="flex gap-7 p-[14px] font-semibold text-orange-600 fonts text-lg">
           <li>
-            <a className="hover:text-rose-700" href="#">
+            <Link className="hover:text-rose-700">
               Home
-            </a>
+              <FontAwesomeIcon icon={faHome} />
+            </Link>
           </li>
           <li>
-            <a className="hover:text-rose-700" href="#">
+            <Link className="hover:text-rose-700" to="/about">
               about
-            </a>
+            </Link>
           </li>
           <li>
-            <a className="hover:text-rose-700" href="#">
-              FAQ
-            </a>
+            <Link className="hover:text-rose-700">FAQ</Link>
           </li>
           <li>
-            <a className="hover:text-rose-700" href="#">
+            <Link className="hover:text-rose-700" to="/contact">
               Conatct
-            </a>
+            </Link>
           </li>
           <li>
-            <a className="hover:text-rose-700" href="#">
+            <Link className="hover:text-rose-700" to="/cart">
               Cart
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

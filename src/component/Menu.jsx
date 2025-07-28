@@ -34,7 +34,7 @@ function Menu() {
       </div>
 
       <div className="mx-40">
-        <div className="Carousels-Card container justify-start w-full overflow-x-auto overflow-y-hidden scrollbar-hide">
+        <div className="Carousels-Card container justify-start w-full overflow-x-auto- overflow-y-hidden overflow-x-hidden">
           {menuData?.map((info, index) => {
             return (
               <MenuCardContainer

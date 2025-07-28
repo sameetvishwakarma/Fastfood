@@ -1,9 +1,13 @@
 import Restaurent from "./Restaurent.jsx";
 import { useEffect, useState } from "react";
 import { API_URL } from "../contants.js";
+// import Shimmercard from "./Shimmer.jsx";
 
 const Cardcontainer = () => {
   const [restaurentData, setRestaurentData] = useState([]);
+  const [isloading, setIsLoading] = useState(true);
+  const [searchText, setSerachText] = useState("");
+  const [filterData, setFilterData] = useState([]);
 
   // const resdata = [
   //     {
@@ -74,6 +78,10 @@ const Cardcontainer = () => {
           ?.restaurants
       );
       // console.log("json", json?.data?.cards[0]);
+      setFilterData(
+        json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+          ?.restaurants
+      );
       setRestaurentData(
         json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
           ?.restaurants
@@ -83,18 +91,41 @@ const Cardcontainer = () => {
     }
   };
 
+  const handleSearch = () => {
+    // console.log("search function is called");
+    const newArray = restaurentData?.filter((restaurant) =>
+      restaurant?.info?.name.toLowerCase().includes(searchText.trim())
+    );
+    console.log("New Array", newArray);
+    setFilterData(newArray);
+  };
+
   useEffect(() => {
     getData();
   }, []);
 
+  // if (isloading) {
+  //   return <Shimmercard />;
+  // }
+
   return (
     <>
+      <div>
+        <input
+          type="text"
+          placeholder="Enter the items"
+          className="border border-gray-400"
+          onChange={(e) => setSerachText(e.target.value.toLowerCase().trim())}
+        />
+        <button onClick={handleSearch}>Search</button>
+      </div>
+
       <div className="mx-28 mt-8 mb-3.5 font-bold text-xl">
         <h1>Top restaurant chains in Mumbai</h1>
       </div>
 
       <div className=" p-5 grid grid-cols-4 container mx-auto max-w-[1200px] gap-15 place-items-center">
-        {restaurentData.map((restaurents) => {
+        {filterData.map((restaurents) => {
           return (
             <Restaurent
               name={restaurents?.info?.name}

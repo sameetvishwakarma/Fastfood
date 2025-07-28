@@ -3,19 +3,22 @@
 // import viteLogo from '/vite.svg'
 import "./App.css";
 import Header from "./component/Header.jsx";
-import Body from "./component/Body.jsx";
-import Menu from "./component/Menu.jsx";
+// import Body from "./component/Body.jsx";
+// import Menu from "./component/Menu.jsx";
+import Footer from "./component/Footer.jsx";
+import { Outlet } from "react-router-dom";
+
 function App() {
   // const [count, setCount] = useState(0)
 
   return (
     <>
       <Header />
-      <Menu />
-      <Body />
+      <Outlet />
+      {/* <Menu /> */}
+      <Footer />
     </>
   );
-  F;
 }
 
 export default App;
