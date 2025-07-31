@@ -5,6 +5,7 @@ import About from "../component/About.jsx";
 import Contact from "../component/Contact.jsx";
 import App from "../App.jsx";
 import Body from "../component/Body.jsx";
+import Menu from "../component/Menu.jsx"
 
 const appRouter = createBrowserRouter([
     {
@@ -30,6 +31,10 @@ const appRouter = createBrowserRouter([
         {
             path: "/cart",
             Component: Cart,
+        },
+        {
+            path:"/restaurant/:title",
+            Component: Menu,
         }
         
     ]

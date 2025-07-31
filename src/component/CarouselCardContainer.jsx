@@ -2,7 +2,7 @@
 // import {link} from "../contants"
 import { Menu_Image_Link } from "../contants";
 
-const MenuCardContainer = ({ title, IMG_LINK }) => {
+const CarouselCardContainer = ({ title, IMG_LINK }) => {
   // console.log(IMG_LINK)
   return (
     <>
@@ -17,4 +17,4 @@ const MenuCardContainer = ({ title, IMG_LINK }) => {
   );
 };
 
-export default MenuCardContainer;
+export default CarouselCardContainer;

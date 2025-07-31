@@ -1,10 +1,10 @@
 import Cardcontainer from "./Cardcontaner";
 // import Searchbar from "./Searchbar"
-import Menu from "../component/Menu";
+import Carousel from "./Carousel";
 const Body = () => {
   return (
     <div>
-      <Menu />
+      <Carousel />
       {/* <div>this is body</div> */}
       <Cardcontainer />
       {/* <Searchbar /> */}

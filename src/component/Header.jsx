@@ -12,7 +12,9 @@ const Header = () => {
   return (
     <div className="fluid-container flex justify-between p-[15px] shadow-lg ">
       <div>
-        <img className="logo" id="logo" src={logo_img} alt="logo" />
+        <Link to="/">
+          <img className="logo" id="logo" src={logo_img} alt="logo" />
+        </Link>
       </div>
       <Searchbar />
       <div>

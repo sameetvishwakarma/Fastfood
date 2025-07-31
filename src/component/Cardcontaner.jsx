@@ -66,7 +66,7 @@ const Cardcontainer = () => {
   //         cuisine:"Bevrages, Fast food",
   //         location:"Marol Naka",
   //     },
-  // // ];
+  // ];
 
   const getData = async () => {
     try {
